@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BD57B82-229C-4160-B829-549F63E7BD00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PCK Studio</RootNamespace>
+    <AssemblyName>PCK Studio</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>PCK Studio.ico</ApplicationIcon>
+    <StartupObject>MinecraftUSkinEditor.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FileTransferProtocolLib" />
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\Bypasser DRxFrAmB0iSe\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="Costura\AssemblyLoader.cs" />
+    <Compile Include="MinecraftUSkinEditor\addAnimatedTexture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\addAnimatedTexture.Designer.cs">
+      <DependentUpon>addAnimatedTexture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\addMeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\addMeta.Designer.cs">
+      <DependentUpon>addMeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\addMetaAdvanced.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\addMetaAdvanced.Designer.cs">
+      <DependentUpon>addMetaAdvanced.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\addnewskin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\addnewskin.Designer.cs">
+      <DependentUpon>addnewskin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\addOffset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\addOffset.Designer.cs">
+      <DependentUpon>addOffset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\AdvancedOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\AdvancedOptions.Designer.cs">
+      <DependentUpon>AdvancedOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\DisplayIdPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\DisplayIdPrompt.Designer.cs">
+      <DependentUpon>DisplayIdPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\Endianness.cs" />
+    <Compile Include="MinecraftUSkinEditor\EntryEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\EntryEditor.Designer.cs">
+      <DependentUpon>EntryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\FileBase.cs" />
+    <Compile Include="MinecraftUSkinEditor\FileData.cs" />
+    <Compile Include="MinecraftUSkinEditor\FileOutput.cs" />
+    <Compile Include="MinecraftUSkinEditor\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\generateModelOLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\generateModelOLD.Designer.cs">
+      <DependentUpon>generateModelOLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\KeyValuePair.cs" />
+    <Compile Include="MinecraftUSkinEditor\LOC.cs" />
+    <Compile Include="MinecraftUSkinEditor\LOCEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\LOCEditor.Designer.cs">
+      <DependentUpon>LOCEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\meta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\meta.Designer.cs">
+      <DependentUpon>meta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\MetaADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\MetaADD.Designer.cs">
+      <DependentUpon>MetaADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\PCK.cs" />
+    <Compile Include="MinecraftUSkinEditor\PictureBoxWithInterpolationMode.cs" />
+    <Compile Include="MinecraftUSkinEditor\presetMeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\presetMeta.Designer.cs">
+      <DependentUpon>presetMeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUSkinEditor\Program.cs" />
+    <Compile Include="MinecraftUSkinEditor\ZipArchive.cs" />
+    <Compile Include="minekampf\colEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="minekampf\colEditor.Designer.cs">
+      <DependentUpon>colEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="minekampf\Forms\creatorSpotlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="minekampf\Forms\creatorSpotlight.Designer.cs">
+      <DependentUpon>creatorSpotlight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="minekampf\Forms\goodbye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="minekampf\Forms\goodbye.Designer.cs">
+      <DependentUpon>goodbye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="minekampf\Forms\installWiiU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="minekampf\Forms\installWiiU.Designer.cs">
+      <DependentUpon>installWiiU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="minekampf\Forms\MyNameLabel.cs" />
+    <Compile Include="minekampf\Forms\MyTablePanel.cs" />
+    <Compile Include="minekampf\Forms\pckCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="minekampf\Forms\pckCenter.Designer.cs">
+      <DependentUpon>pckCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="minekampf\Forms\pckCenterOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="minekampf\Forms\pckCenterOpen.Designer.cs">
+      <DependentUpon>pckCenterOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="minekampf\Forms\pckLocked.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="minekampf\Forms\pckLocked.Designer.cs">
+      <DependentUpon>pckLocked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="minekampf\Forms\PckPreview.cs" />
+    <Compile Include="minekampf\generateModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="minekampf\generateModel.Designer.cs">
+      <DependentUpon>generateModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="minekampf\generateModelOLD.cs" />
+    <Compile Include="minekampf\programInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="minekampf\programInfo.Designer.cs">
+      <DependentUpon>programInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="minekampf\Properties\Resources.cs" />
+    <Compile Include="minekampf\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Ohana3DS_Rebirth\Ohana\RenderBase.cs" />
+    <Compile Include="Ohana3DS_Rebirth\Ohana\TextureCodec.cs" />
+    <Compile Include="Ohana3DS_Rebirth\Ohana\TextureUtils.cs" />
+    <Compile Include="ProcessedByFody.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Costura\costura\dll.compressed" />
+    <EmbeddedResource Include="Costura\cyotek\drawing\bitmapfont\dll.compressed" />
+    <EmbeddedResource Include="Costura\expandablepanel\dll.compressed" />
+    <EmbeddedResource Include="Costura\filetransferprotocollib\dll.compressed" />
+    <EmbeddedResource Include="Costura\ftpmanager\dll.compressed" />
+    <EmbeddedResource Include="Costura\geoapi\dll.compressed" />
+    <EmbeddedResource Include="Costura\helixtoolkit\dll.compressed" />
+    <EmbeddedResource Include="Costura\helixtoolkit\wpf\dll.compressed" />
+    <EmbeddedResource Include="Costura\helixtoolkit\wpf\sharpdx\dll.compressed" />
+    <EmbeddedResource Include="Costura\icsharpcode\sharpziplib\dll.compressed" />
+    <EmbeddedResource Include="Costura\metroframework\design\dll.compressed" />
+    <EmbeddedResource Include="Costura\metroframework\dll.compressed" />
+    <EmbeddedResource Include="Costura\metroframework\fonts\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\sqlserver\types\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\win32\primitives\dll.compressed" />
+    <EmbeddedResource Include="Costura\mysql\data\dll.compressed" />
+    <EmbeddedResource Include="Costura\nettopologysuite\dll.compressed" />
+    <EmbeddedResource Include="Costura\opengl\dll.compressed" />
+    <EmbeddedResource Include="Costura\powercollections\dll.compressed" />
+    <EmbeddedResource Include="Costura\sharpdx\d3dcompiler\dll.compressed" />
+    <EmbeddedResource Include="Costura\sharpdx\direct2d1\dll.compressed" />
+    <EmbeddedResource Include="Costura\sharpdx\direct3d11\dll.compressed" />
+    <EmbeddedResource Include="Costura\sharpdx\direct3d11\effects\dll.compressed" />
+    <EmbeddedResource Include="Costura\sharpdx\direct3d9\dll.compressed" />
+    <EmbeddedResource Include="Costura\sharpdx\dll.compressed" />
+    <EmbeddedResource Include="Costura\sharpdx\dxgi\dll.compressed" />
+    <EmbeddedResource Include="Costura\sharpdx\mathematics\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\appcontext\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\console\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\diagnostics\diagnosticsource\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\globalization\calendars\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\io\compression\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\io\compression\zipfile\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\io\filesystem\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\io\filesystem\primitives\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\net\http\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\net\sockets\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\runtime\interopservices\runtimeinformation\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\security\cryptography\algorithms\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\security\cryptography\encoding\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\security\cryptography\primitives\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\security\cryptography\x509certificates\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\xml\readerwriter\dll.compressed" />
+    <EmbeddedResource Include="Costura\tao\freeglut\dll.compressed" />
+    <EmbeddedResource Include="Costura\thinkgeo\mapsuite\dll.compressed" />
+    <EmbeddedResource Include="Costura\thinkgeo\mapsuite\productcenter\exe.compressed" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\addAnimatedTexture.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\addMeta.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\addMetaAdvanced.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\addnewskin.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\addOffset.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\AdvancedOptions.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\DisplayIdPrompt.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\EntryEditor.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\FormMain.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\LOCEditor.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\meta.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\MetaADD.resources" />
+    <EmbeddedResource Include="MinecraftUSkinEditor\presetMeta.resources" />
+    <EmbeddedResource Include="minekampf\colEditor.resources" />
+    <EmbeddedResource Include="minekampf\Forms\creatorSpotlight.resources" />
+    <EmbeddedResource Include="minekampf\Forms\goodbye.resources" />
+    <EmbeddedResource Include="minekampf\Forms\installWiiU.resources" />
+    <EmbeddedResource Include="minekampf\Forms\pckCenter.resources" />
+    <EmbeddedResource Include="minekampf\Forms\pckCenterOpen.resources" />
+    <EmbeddedResource Include="minekampf\Forms\pckLocked.resources" />
+    <EmbeddedResource Include="minekampf\generateModel.resources" />
+    <EmbeddedResource Include="minekampf\generateModelOLD.resources" />
+    <EmbeddedResource Include="minekampf\programInfo.resources" />
+    <EmbeddedResource Include="minekampf\Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="minekampf\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
