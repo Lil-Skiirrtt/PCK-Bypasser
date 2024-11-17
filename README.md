@@ -1,4 +1,4 @@
-# PCK-Bypasser
+# PCK Bypasser
 
 Download: https://github.com/Lil-Skiirrtt/PCK-Bypasser/releases/tag/PCKBypasser
 
